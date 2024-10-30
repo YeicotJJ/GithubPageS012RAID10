@@ -1,0 +1,143 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+.raid-example {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.disk {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    background-color: #d7d7db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.disk:hover {
+    filter: saturate(2.5);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #39913d;
+}
+
+.disk {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    border: 2px solid #555;
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 10;
+    font-family: cursive;
+    color: #555;
+}
+
+.fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #4071b9;
+    transition: height 0.3s ease;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.notification {
+    position: fixed;
+    visibility: visible;
+    min-width: 200px;
+    width: 220px;
+    top: 150px;
+    left: 50px;
+    text-align: center;
+    z-index: 1;
+    opacity: 0.99;
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+    display: block;
+    transition: all 0.5s ease-out;
+}
+
+.notification2 {
+    top: 250px;
+    display: none;
+}
+
+.notification.show {
+    opacity: 1;
+    display: block;
+    animation: myAnim 0.5s ease 0s 2 normal forwards;
+}
+
+
+/*MY ANIMATIONS*/
+
+@keyframes myAnim {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
