@@ -184,3 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setDiskSizeRAID1(); // Inicializa el tamaño de almacenamiento en RAID 1
     setDiskSizeRAID10(); // Inicializa el tamaño de almacenamiento en RAID 10
 });
+
+document.getElementById("infoButton").addEventListener("click", function() {
+    alert("Autores:\n-Yeicot Sarmiento\n-Pyerina Rivera\n-Ana Chumacero");
+});
